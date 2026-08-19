@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N.O.M.A.D Privacy Policy</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5b5b5b;
+    --border: #e2e2e2;
+    --table-head: #f4f4f4;
+    --link: #0b5fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --fg: #e8e8e8;
+      --muted: #a3a3a3;
+      --border: #2c2f35;
+      --table-head: #1e2126;
+      --link: #6fa8ff;
+    }
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+  }
+  h1 { font-size: 1.7rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.2rem; margin-top: 2.2rem; border-top: 1px solid var(--border); padding-top: 1.4rem; }
+  .updated { color: var(--muted); font-size: 0.9rem; margin-top: 0; margin-bottom: 2rem; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid var(--border); padding: 0.55rem 0.7rem; text-align: left; vertical-align: top; }
+  th { background: var(--table-head); }
+  code { background: var(--table-head); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.9em; }
+  a { color: var(--link); }
+</style>
+</head>
+<body>
+
+<h1>N.O.M.A.D Privacy Policy</h1>
+<p class="updated">Last updated: 2026-08-19</p>
+
+<p>This policy describes how N.O.M.A.D ("the app") handles your data.</p>
+
+<h2>What the app collects</h2>
+<p>While you have a trip running, the app records:</p>
+<ul>
+  <li><strong>GPS location</strong>, continuously, including while the app is in the background or the screen is off. This is required to build a timeline of your trip (moving vs. stopped segments, speed, route) and to identify the roads and traffic signals along it.</li>
+  <li><strong>Accelerometer readings</strong>, used only to compute acceleration/deceleration for each segment &mdash; not stored as raw sensor data.</li>
+</ul>
+<p>No data is collected unless you have explicitly started a trip.</p>
+
+<h2>How your data is used</h2>
+<p>Your recorded trip data is used entirely on your own device to:</p>
+<ul>
+  <li>Build a road-level breakdown of each trip (moving/stopped segments, distance, speed, acceleration).</li>
+  <li>Identify the roads and traffic signals your trip passed, and grade any delay against standard traffic-engineering thresholds.</li>
+  <li>Let you export a trip (CSV/GPX) to your device's Downloads folder for your own use in other tools (spreadsheets, GIS software, Google Earth).</li>
+</ul>
+
+<h2>Third parties your location is shared with</h2>
+<p>To identify roads and traffic signals, coordinates from your trip are sent to the following public, third-party map services, for the duration of each lookup only:</p>
+<table>
+  <tr><th>Service</th><th>Purpose</th></tr>
+  <tr><td><strong>OSRM</strong> (Open Source Routing Machine, <code>router.project-osrm.org</code>)</td><td>Matches your raw GPS trace to the actual road network and identifies road names.</td></tr>
+  <tr><td><strong>Overpass API</strong> (OpenStreetMap query service)</td><td>Looks up nearby traffic signals, pedestrian crossings, and cross streets.</td></tr>
+  <tr><td><strong>Nominatim</strong> (OpenStreetMap)</td><td>Reverse-geocodes a coordinate to a place/road name as a fallback.</td></tr>
+  <tr><td><strong>OpenStreetMap tile server</strong> (<code>tile.openstreetmap.org</code>)</td><td>Loads the map imagery shown on the trip playback screen &mdash; receives only the map tile coordinates for the area being viewed, not your GPS trace itself.</td></tr>
+</table>
+<p>These are public OpenStreetMap-ecosystem services, not operated by us. We do not operate any backend server of our own, and your trip data is never uploaded to one &mdash; only the specific coordinates needed for a lookup are sent to these services, and only when a lookup is actually needed.</p>
+<p>If you select a regional traffic-signal dataset in Settings, signal lookups for that region are resolved entirely offline from data bundled with the app, with no network request at all.</p>
+
+<h2>Data storage and retention</h2>
+<p>All trip data (GPS traces, segments, exports) is stored locally on your device only, in the app's private storage. It is never transmitted to us or to any server we control. You can delete individual trips at any time from Trip History; deleting the app removes all of its data.</p>
+
+<h2>Analytics and advertising</h2>
+<p>The app contains no analytics, advertising, or crash-reporting software development kits (SDKs). Nothing about your usage of the app is sent to us.</p>
+
+<h2>Children's privacy</h2>
+<p>The app is not directed at children and does not knowingly collect data from children.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes, the "Last updated" date above will be revised.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:nomad.traffic.app@gmail.com">nomad.traffic.app@gmail.com</a></p>
+
+</body>
+</html>
