@@ -46,9 +46,9 @@
 <body>
 
 <h1>N.O.M.A.D Privacy Policy</h1>
-<p class="updated">Last updated: 2026-09-10</p>
+<p class="updated">Last updated: 2026-10-12</p>
 
-<p>This policy describes how N.O.M.A.D ("the app") handles your data.</p>
+<p>This policy describes how N.O.M.A.D ("the app") handles your data. The sections below describe the Android app; the companion Windows app, N.O.M.A.D Desktop, is covered in <a href="#desktop">its own section</a>.</p>
 
 <h2>What the app collects</h2>
 <p>While you have a trip running, the app records:</p>
@@ -84,6 +84,18 @@
 
 <h2>Analytics and advertising</h2>
 <p>The app contains no analytics, advertising, or crash-reporting software development kits (SDKs). Nothing about your usage of the app is sent to us.</p>
+
+<h2 id="desktop">N.O.M.A.D Desktop (Windows)</h2>
+<p>N.O.M.A.D Desktop is a companion app for Windows PCs for reviewing and comparing trips recorded with the Android app. It handles your data as follows.</p>
+<ul>
+  <li><strong>No recording.</strong> The desktop app never collects your location. It only shows trips you choose to transfer to it from the phone.</li>
+  <li><strong>Transfers stay between your devices.</strong> Trips go straight from the phone to your PC, over your local network or a USB cable. Nothing passes through us or any server we control. The PC only accepts trips while its Receive page is open: over the network, only from a phone that has entered the pairing code shown on the PC's screen; over a USB cable, only from a phone you have connected and unlocked. You can also import a database file you exported from the phone yourself. A received database replaces the trips loaded on the PC only after you confirm it.</li>
+  <li><strong>The same lookup services as the phone.</strong> When the desktop app identifies or re-checks a trip's roads and signals, it sends coordinates from that trip to the same third-party services listed above (OSRM, Overpass API and Nominatim), and loads map imagery from the OpenStreetMap tile server, in the same way as the Android app.</li>
+  <li><strong>Update checks.</strong> To find new versions, the app asks GitHub (<code>api.github.com</code>) for the latest release: when it starts, at most twice a day, or when you choose <em>Check for updates</em>. You can turn automatic checks off in About. GitHub sees your IP address and the app's version number. No trip data is sent. Updates are downloaded from GitHub and checked against their published checksum before they are installed.</li>
+  <li><strong>Traffic-signal datasets.</strong> If you add a regional traffic-signal dataset, it is downloaded from that region's public open-data portal. No trip data is sent.</li>
+  <li><strong>Where your data is kept.</strong> Trips are stored only on your PC, in <code>%APPDATA%\com.nomad\N.O.M.A.D Desktop</code>, together with backup copies of the trips each import replaced. Exports are saved to your Downloads folder, or shared through Windows' own share feature, only when you choose to. You can delete trips in the app. Uninstalling the app leaves your trips in that folder; delete the folder to remove them.</li>
+  <li><strong>No analytics.</strong> As with the Android app, the desktop app contains no analytics, advertising, or crash-reporting SDKs, and nothing about your use of it is sent to us.</li>
+</ul>
 
 <h2>Children's privacy</h2>
 <p>The app is not directed at children and does not knowingly collect data from children.</p>
