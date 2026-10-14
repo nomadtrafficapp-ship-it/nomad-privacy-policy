@@ -46,7 +46,7 @@
 <body>
 
 <h1>N.O.M.A.D Privacy Policy</h1>
-<p class="updated">Last updated: 2026-10-13</p>
+<p class="updated">Last updated: 2026-10-14</p>
 
 <p>This policy describes how N.O.M.A.D ("the app") handles your data. The sections below describe the Android app; the companion Windows app, N.O.M.A.D Desktop, is covered in <a href="#desktop">its own section</a>.</p>
 
@@ -75,6 +75,7 @@
   <tr><td><strong>OSRM</strong> (Open Source Routing Machine, <code>router.project-osrm.org</code>)</td><td>Matches your raw GPS trace to the actual road network and identifies road names.</td></tr>
   <tr><td><strong>Overpass API</strong> (OpenStreetMap query service)</td><td>Looks up nearby traffic signals, pedestrian crossings, and cross streets.</td></tr>
   <tr><td><strong>Nominatim</strong> (OpenStreetMap)</td><td>Reverse-geocodes a coordinate to a place/road name as a fallback.</td></tr>
+  <tr><td><strong>Valhalla</strong> (FOSSGIS, <code>valhalla1.openstreetmap.de</code>)</td><td>Looks up cross streets and speed limits when no Overpass API server is reachable.</td></tr>
   <tr><td><strong>OpenStreetMap tile server</strong> (<code>tile.openstreetmap.org</code>)</td><td>Loads the map imagery shown on the trip playback screen &mdash; receives only the map tile coordinates for the area being viewed, not your GPS trace itself.</td></tr>
 </table>
 <p>These are public OpenStreetMap-ecosystem services, not operated by us. We do not operate any backend server of our own, and your trip data is never uploaded to one &mdash; only the specific coordinates needed for a lookup are sent to these services, and only when a lookup is actually needed.</p>
@@ -91,7 +92,7 @@
 <ul>
   <li><strong>No recording.</strong> The desktop app never collects your location. It only shows trips you choose to transfer to it from the phone.</li>
   <li><strong>Transfers stay between your devices.</strong> Trips go straight from the phone to your PC, over your local network or a USB cable. Nothing passes through us or any server we control. Over the network, the PC only accepts trips while its Receive page is open, and only from a phone that has entered the pairing code shown on the PC's screen. Over a USB cable, it only takes trips from a phone you have connected and unlocked; with the phone on File transfer, the app looks only in the phone's <code>Download/Nomad/Desktop</code> folder, asks before importing what it finds there, and removes it from the phone afterwards. You can also import a database file you exported from the phone yourself. A received database is added to the trips on the PC only after you confirm it, and it never changes or removes trips already there.</li>
-  <li><strong>The same lookup services as the phone.</strong> When the desktop app identifies or re-checks a trip's roads and signals, it sends coordinates from that trip to the same third-party services listed above (OSRM, Overpass API and Nominatim), and loads map imagery from the OpenStreetMap tile server, in the same way as the Android app.</li>
+  <li><strong>The same lookup services as the phone.</strong> When the desktop app identifies or re-checks a trip's roads and signals, it sends coordinates from that trip to the same third-party services listed above (OSRM, Overpass API, Valhalla and Nominatim), and loads map imagery from the OpenStreetMap tile server, in the same way as the Android app.</li>
   <li><strong>Update checks.</strong> To find new versions, the app asks GitHub (<code>api.github.com</code>) for the latest release: when it starts, at most twice a day, or when you choose <em>Check for updates</em>. You can turn automatic checks off in About. GitHub sees your IP address and the app's version number. No trip data is sent. Updates are downloaded from GitHub and checked against their published checksum before they are installed.</li>
   <li><strong>Traffic-signal datasets.</strong> If you add a regional traffic-signal dataset, it is downloaded from that region's public open-data portal. No trip data is sent.</li>
   <li><strong>Where your data is kept.</strong> Trips are stored only on your PC, in <code>%APPDATA%\com.nomad\N.O.M.A.D Desktop</code>, together with backup copies of them made before each import. Exports are saved to your Downloads folder, or shared through Windows' own share feature, only when you choose to. You can delete trips in the app. Uninstalling the app leaves your trips in that folder; delete the folder to remove them.</li>
